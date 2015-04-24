@@ -1,0 +1,11 @@
+defaults: &defaults
+  some_key: 'some_value'
+
+development:
+  <<: *defaults
+
+test: &test
+  <<: *defaults
+
+production:
+  <<: *defaults
