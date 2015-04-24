@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<div class="ui-title" data-role="header" align="left" data-position="fixed">
+  <h1>Rocket Tips</h1>
+  <a href="<%= root_path %>" class="ui-btn-right" data-theme="a" data-rel="" data-icon="home">Home</a>
+</div>
+
+<div data-role="content">
+  <ul data-role="listview" id="fix-list">
+    <% @meetings.each do |meeting| %>
+        <li>
+          <a href=<%= root_path %>>
+            <div class="ui-grid-b">
+              <div class="ui-block-a main-font" style="width:20%">
+                <%= "#{DateTime.parse(meeting.date.to_s).strftime('%e %B')}: #{meeting.racecourse.name}" %>
+                <br>
+                <h10 class="kickoff">
+                  <%= meeting.event %>
+                </h10>
+              </div>
+              <div class="ui-block-b main-font" style="width:80%">
+              </div>
+            </div>
+          </a>
+        </li>
+    <% end %>
+  </ul>
+</div>
+</html>
