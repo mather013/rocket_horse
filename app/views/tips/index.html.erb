@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<div class="ui-title" data-role="header" align="left" data-position="fixed">
+  <a href="<%= meetings_path %>" class="ui-btn-left" data-theme="a" data-rel="" data-icon="back">Back</a>
+
+  <h1><%= "#{DateTime.parse(@meeting.date.to_s).strftime('%e %B')} #{@meeting.racecourse.name}" %></h1>
+</div>
+
+<div data-role="content">
+  <ul data-role="listview" id="fix-list">
+    <% @tips.each do |tip| %>
+        <li class="custom-list">
+          <div class="ui-grid-b">
+            <div class="ui-block-a main-font" style="width:14%">
+              <%= "#{DateTime.parse(tip.race_time.to_s).strftime('%H:%M')}" %>
+            </div>
+            <div class="ui-block-b main-font" style="width:86%">
+            <%= "#{tip.horse_name} #{tip.odds}" %>
+              <br>
+              <h10 class="kickoff">
+                <%= tip.information %>
+              </h10>
+            </div>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+</div>
+</html>
