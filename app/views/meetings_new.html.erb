@@ -1,4 +1,12 @@
-<%= form_for @meeting, html: {autocomplete: 'off'}, url: "/meetings/#{@meeting.id}", method: :put do |meeting| %>
+<!DOCTYPE html>
+<html>
+
+<div class="ui-title" data-role="header" align="left" data-position="fixed">
+  <a href="<%= meetings_edits_path %>" class="ui-btn-left" data-theme="a" data-rel="" data-icon="back">Back</a>
+  <h1>Rocket Tips</h1>
+</div>
+
+    <%= form_for(@meeting) do |meeting| %>
     <fieldset>
       <div class="control-group custom-textbox">
 
@@ -18,3 +26,6 @@
       </div>
     </fieldset>
 <% end %>
+
+</div>
+</html>
