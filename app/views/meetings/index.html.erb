@@ -2,9 +2,9 @@
 <html>
 
 <div class="ui-title" data-role="header" align="left" data-position="fixed">
-  <a href="<%= root_path %>" class="ui-btn-left" data-theme="a" data-rel="" data-icon="gear">Profile</a>
+  <a href="<%= profiles_path %>" class="ui-btn-left" data-theme="a" data-rel="" data-icon="gear">Profile</a>
   <h1>Rocket Tips</h1>
-  <a href="<%= root_path %>" class="ui-btn-right" data-theme="a" data-rel="" data-icon="edit">Edit</a>
+  <a href="<%= meetings_edits_path %>" class="ui-btn-right" data-theme="a" data-rel="" data-icon="edit">Edit</a>
 </div>
 
 <div data-role="content">
@@ -13,14 +13,15 @@
         <li class="custom-list">
           <a href=<%= tips_path(meeting.id) %>>
             <div class="ui-grid-b">
-              <div class="ui-block-a main-font" style="width:20%">
+              <div class="ui-block-a main-font" style="width:80%">
                 <%= "#{DateTime.parse(meeting.date.to_s).strftime('%e %B')}: #{meeting.racecourse.name}" %>
                 <br>
                 <h10 class="kickoff">
                   <%= meeting.event %>
                 </h10>
               </div>
-              <div class="ui-block-b main-font" style="width:80%">
+              <div class="ui-block-b main-font" style="width:20%">
+
               </div>
             </div>
           </a>

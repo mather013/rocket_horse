@@ -1,0 +1,13 @@
+<%= form_for(@meeting) do |f| %>
+    <div class="field">
+      <%= f.label :event %><br />
+      <%= f.text_field :event %>
+    </div>
+    <div class="field">
+      <%= f.label :date %><br />
+      <%= f.text_field :date %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

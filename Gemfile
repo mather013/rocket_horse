@@ -32,6 +32,11 @@ group :test do
   gem 'webmock', '~>1.9'
 end
 
+group :development, :test do
+  gem 'dotenv'
+  gem 'dotenv-deployment'
+end
+
 group :production do
   gem 'rails_12factor'
 end
