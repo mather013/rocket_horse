@@ -215,11 +215,11 @@ width: 200px !important;
     border-width:0 !important;
 }
 
-.custom-list {
-    background: white  !important;
-}
-
 .custom-textbox {
     width : 200px;
     margin: 20px 0px 0px 20px;
 }​
+
+.custom-list {
+    background: white  !important;
+}
