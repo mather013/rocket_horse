@@ -1,8 +1,8 @@
-.points_sml {
-    font-size: .8em;
+.tips_count {
+    /*font-size: 1em;*/
     color: #979797;
     position: relative;
-    top: 7px;
+    top: 4px;
 }
 
 .leaderboard {
