@@ -3,9 +3,8 @@
 
 <div class="ui-title" data-role="header" align="left" data-position="fixed">
   <a href="<%= profiles_path %>" class="ui-btn-left" data-theme="a" data-rel="" data-icon="gear">Profile</a>
-
-  <h1>Rocket Tips</h1>
   <a href="<%= meetings_edits_path %>" class="ui-btn-right" data-theme="a" data-rel="" data-icon="edit">Edit</a>
+  <h1>Rocket Tips</h1>
 </div>
 
 <div data-role="content">
@@ -14,18 +13,18 @@
         <li class="custom-list">
           <a href=<%= tips_path(meeting.id) %>>
             <div class="ui-grid-b">
-              <div class="ui-block-a main-font" style="width:80%">
+              <div class="ui-block-a main-font" style="width:70%">
                 <%= "#{DateTime.parse(meeting.date.to_s).strftime('%e %B')}: #{meeting.racecourse.name}" %>
                 <br>
                 <h10 class="kickoff">
                   <%= meeting.event %>
                 </h10>
               </div>
-              <div class="ui-block-b tips_count" style="width:20%">
+              <div class="ui-block-b tips_count" style="width:30%">
                 <% tips_count = meeting.tips.count %>
                 <% unless tips_count == 0 %>
                 <span class="label label-warning">
-                  <%= tips_count > 1 ? "#{meeting.tips.count} tips" : "#{meeting.tips.count} tip"%>
+                  <%= tips_count > 1 ? "#{meeting.tips.count} tips" : "#{meeting.tips.count} tip" %>
                 </span>
                 <% end %>
               </div>

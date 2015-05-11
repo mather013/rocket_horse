@@ -6,7 +6,7 @@
   <a href="<%= new_meeting_path %>" class="ui-btn-right" data-theme="a" data-rel="" data-icon="add">New</a>
   <h1>Rocket Tips</h1>
 </div>
-<% binding %>
+
 <div data-role="content">
   <ul data-role="listview" id="fix-list">
     <% @meetings.each do |meeting| %>
@@ -22,7 +22,7 @@
             <div class="ui-block-b main-font" style="width:30%">
               <td><%= link_to 'edit', edit_meeting_path(meeting) %></td>
               &nbsp
-              <td><%= link_to 'delete', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'delete', meeting, method: :delete, data: {confirm: 'Are you sure?'} %></td>
             </div>
           </div>
         </li>
